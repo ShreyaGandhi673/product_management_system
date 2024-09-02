@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Management System</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/1ef8c94506.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Elymaic&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- main page -->
+    <div class="container">
+            
+            <div>
+                <h1>
+                   
+                        Product Management System
+                  
+                    <!-- <input id="search" type="text" placeholder="Search by Id">  -->
+                </h1>
+            </div>
+          
+        
+        <button class="addBtn" onclick="showForm()">
+            Add Product
+        </button>
+        <table id="table">
+        </table>
+    </div>
+
+    <!-- deleting popup -->
+    <div class="popup" id="popup">
+
+        <div class="head">
+            <h2>Confirm the product</h2>
+            <a><i class="fa-solid fa-xmark" onclick="closePopUp()"></i></a>
+        </div>
+        <div class=".deleteText">
+            <p id="deleteText"></p>
+        </div>
+        <div class="actions">
+            <button onclick="deleteRecord()" id="dltBtn">Delete</button>
+            <button onclick="closePopUp()" id="cnlBtn">Cancel</button>
+        </div>
+
+
+    </div>
+
+    <!-- form -->
+    <div class="form" id="userForm">
+        <form>
+            <input type="text" id="id" placeholder="Product Id"><br>
+            <input type="text" id="name" placeholder="Name"><br>
+            <input type="text" id="desc" placeholder="Description"><br>
+            <input type="text" id="price" placeholder="Price"><br>
+            <input type="text" id="category" placeholder="Category"><br>
+            <input type="text" id="stock_quan" placeholder="Stock Quantity"><br>
+            <input type="text" id="manu" placeholder="Manufacturer"><br>
+            <input type="date" id="date" placeholder="Release date"><br>
+            <input type="text" id="rating" placeholder="Rating"><br>
+
+            <button onclick="addProduct(event)">Add Product</button>
+        </form>
+
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
